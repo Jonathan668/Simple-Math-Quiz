@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --hue-normal: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    --hue: var(--hue-normal);
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct{
+    --hue: var(--hue-correct);
+}
+
+body.wrong{
+    --hue: var(--hue-wrong);
+}
+
+.container{
+    width: 600px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    font-size: 2rem;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+    
+}
+.btn{
+    --hue:var(--hue-normal);
+    border: 3px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    height: 50px;   
+    font-size: 1.5rem;
+}
+.btn:hover{
+    border-color: lightskyblue;
+    cursor: pointer;
+    transform: scale(0.97);
+    transition: all 0.3s ease; 
+}
+.btn.correct{
+    --hue: var(--hue-correct);
+}
+.btn.wrong{
+    --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.return{
+    display: flex;
+    justify-content: flex-end;
+}
+#title{
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+
+@media all and (max-width: 450px) {
+    .btn{
+        height: 35px;   
+        font-size: 1rem;
+    }
+    .controls{
+        margin-bottom: 10px;
+    }
+    .next-btn{
+        font-size: 1rem;
+    }
