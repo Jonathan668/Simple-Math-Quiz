@@ -19,7 +19,6 @@ divButton.addEventListener('click', startDivQuiz)
 returnButton.addEventListener('click', returnToMenu)
 
 function startAddQuiz(){
-    console.log('Addition Quiz Started')
     returnButton.classList.remove('hide')
     menuContainerElement.classList.add('hide')
     shuffledQuestions = addQuestions.sort(() => Math.random() - .5)
@@ -28,7 +27,6 @@ function startAddQuiz(){
     setNextQuestion()
 }
 function startSubQuiz(){
-    console.log('Subtraction Quiz Started')
     returnButton.classList.remove('hide')
     menuContainerElement.classList.add('hide')
     shuffledQuestions = subQuestions.sort(() => Math.random() - .5)
@@ -37,7 +35,6 @@ function startSubQuiz(){
     setNextQuestion()
 }
 function startMultQuiz(){
-    console.log('Multiplication Quiz Started')
     returnButton.classList.remove('hide')
     menuContainerElement.classList.add('hide')
     shuffledQuestions = multQuestions.sort(() => Math.random() - .5)
@@ -46,7 +43,6 @@ function startMultQuiz(){
     setNextQuestion()
 }
 function startDivQuiz(){
-    console.log('Division Quiz Started')
     returnButton.classList.remove('hide')
     menuContainerElement.classList.add('hide')
     shuffledQuestions = divQuestions.sort(() => Math.random() - .5)
@@ -56,7 +52,6 @@ function startDivQuiz(){
 }
 
 function returnToMenu(){
-    console.log('Return to menu')
     menuContainerElement.classList.remove('hide')
     questionContainerElement.classList.add('hide')
     returnButton.classList.add('hide')
